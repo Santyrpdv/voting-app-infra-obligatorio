@@ -1,0 +1,37 @@
+# === Terraform ===
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfvars
+terraform.tfplan
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# === VS Code ===
+.vscode/
+
+# === Logs ===
+*.log
+
+# === Windows archivos ocultos ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Archivos temporales y de sistema ===
+*.swp
+*.tmp
+*.bak
+*.old
+
+# === Archivos comprimidos ===
+*.zip
+*.tar.gz
+*.7z
+
+# === Git ===
+*.orig
