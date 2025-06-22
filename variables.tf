@@ -42,6 +42,11 @@ variable "vpc_aws_az-2" {
   default = "us-east-1b"
 }
 
+
+variable "ssh_location" {
+  type = string
+}
+
 /*
   output "ec2-id" {
     value = aws_instance.ac1-instance.id
