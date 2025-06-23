@@ -47,6 +47,16 @@ variable "ssh_location" {
   type = string
 }
 
+variable "db_username" {
+  type      = string
+  sensitive = true
+}
+
+variable "db_password" {
+  type      = string
+  sensitive = true
+}
+
 /*
   output "ec2-id" {
     value = aws_instance.ac1-instance.id
