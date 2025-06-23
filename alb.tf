@@ -32,20 +32,14 @@ resource "aws_lb_target_group" "alb_target_group" {
   }
 }
 
-# create a listener on port 80 with redirect action
 resource "aws_lb_listener" "alb_http_listener" {
-  load_balancer_arn =aws_lb.application_load_balancer.arn
+  load_balancer_arn = aws_lb.application_load_balancer.arn
   port              = 80
   protocol          = "HTTP"
 
   default_action {
-    type = "redirect"
-
-    redirect {
-      port        = 443
-      protocol    = "HTTPS"
-      status_code = "HTTP_301"
-    }
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.alb_target_group.arn
   }
 }
 
