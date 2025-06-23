@@ -57,6 +57,17 @@ variable "db_password" {
   sensitive = true
 }
 
+variable "env_file_bucket_name" {
+  type      = string
+}
+
+variable "architecture" {
+  type      = string
+}
+variable "container-image" {
+  type      = string
+}
+
 /*
   output "ec2-id" {
     value = aws_instance.ac1-instance.id
